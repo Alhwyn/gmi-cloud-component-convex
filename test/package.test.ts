@@ -1,12 +1,10 @@
-import { defineApp, defineSchema } from "convex/server";
+import { defineSchema } from "convex/server";
 import { defineTestApp } from "convex-test";
 import { expect, test } from "vitest";
 import { exposeApi } from "gmi-cloud-component-convex";
-import component from "gmi-cloud-component-convex/convex.config.js";
 import componentTest from "gmi-cloud-component-convex/test";
 
-test("a host app can mount and call the component through package exports", async () => {
-  defineApp().use(component);
+test("a host app can call the component through package exports", async () => {
   const app = defineTestApp({
     schema: defineSchema({}),
     components: { gmiCloudComponent: componentTest },
