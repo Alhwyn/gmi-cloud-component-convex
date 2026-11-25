@@ -1,0 +1,7 @@
+.agents/skills/
+.claude/skills/
+dist
+package-lock.json
+**/_generated/
+*.tsbuildinfo
+.convex/
